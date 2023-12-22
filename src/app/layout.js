@@ -12,9 +12,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${barlowCondensed.className} max-w-screen h-screen text-white `}>
-        <Header/>
-        {children}
+      <body className={`${barlowCondensed.className} max-w-screen min-h-screen text-white`}>
+          {children}
         </body>
     </html>
   )

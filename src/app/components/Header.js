@@ -1,12 +1,14 @@
 "use client";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function Header() {
-  const [pageSelected, setPageSelected] = useState("Home");
+  const page = usePathname().slice(1) || "Home"
+  const [pageSelected, setPageSelected] = useState(page);
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
-
+  const router = useRouter()
+  
   return (
     <header className="w-full absolute  flex justify-between">
       <div className="w-full flex justify-between items-center lg:mt-10">
@@ -53,6 +55,7 @@ export default function Header() {
               value={"Home"}
               onClick={(e) => {
                 setPageSelected(e.target.value);
+                router.push("/");
               }}
               className={`flex py-5 sm:py-10  ${
                 pageSelected === "Home" ? "sm:border-b-2" : ""
@@ -67,6 +70,7 @@ export default function Header() {
               value={"Destination"}
               onClick={(e) => {
                 setPageSelected(e.target.value);
+                router.push("/Destination");
               }}
               className={`flex py-5 sm:py-10  ${
                 pageSelected === "Destination" ? "border-b-2" : ""
@@ -81,6 +85,7 @@ export default function Header() {
               value={"Crew"}
               onClick={(e) => {
                 setPageSelected(e.target.value);
+                router.push("/Crew");
               }}
               className={`flex py-5 sm:py-10  ${
                 pageSelected === "Crew" ? "border-b-2" : ""
@@ -95,6 +100,7 @@ export default function Header() {
               value={"Technology"}
               onClick={(e) => {
                 setPageSelected(e.target.value);
+                router.push("/Technology");
               }}
               className={`flex py-5 sm:py-10  ${
                 pageSelected === "Technology" ? "border-b-2" : ""

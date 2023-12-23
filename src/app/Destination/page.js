@@ -13,8 +13,8 @@ export default function destinationPage() {
       <div className="pb-20 gap-5 lg:gap-32 lg:text-left pt-32 sm:pt-36 lg:pt-52 px-6 flex flex-col lg:flex-row items-center min-h-screen w-full sm:px-9 lg:px-52 bg-no-repeat bg-cover bg-center bg-[url(/assets/destination/background-destination-mobile.jpg)] sm:bg-[url(/assets/destination/background-destination-tablet.jpg)] lg:bg-[url(/assets/destination/background-destination-desktop.jpg)]">
         <div className="gap-5 flex flex-col w-full items-center">
 
-        <h1 className="flex justify-center gap-2 font-medium text-base sm:text-xl lg:text-3xl sm:justify-start w-full">
-          <p className=" font-extralight">01</p>PICK YOUR DESTINATION
+        <h1 className="flex justify-center gap-2 text-base sm:text-xl lg:text-3xl sm:justify-start w-full">
+          <p className=" opacity-50">01</p>PICK YOUR DESTINATION
         </h1>
         <div className="size-44 sm:mt-16 sm:mb-12 sm:size-80 lg:size-[445px]">
           <Image src={destination.images.png} width={720} height={720} />

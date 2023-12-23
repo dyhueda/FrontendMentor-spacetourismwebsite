@@ -73,7 +73,7 @@ export default function Header() {
                 router.push("/Destination");
               }}
               className={`flex py-5 sm:py-10  ${
-                pageSelected === "Destination" ? "border-b-2" : ""
+                pageSelected === "Destination" ? "sm:border-b-2" : ""
               }`}
             >
               <p className="font-bold block sm:hidden lg:block">02</p>
@@ -88,7 +88,7 @@ export default function Header() {
                 router.push("/Crew");
               }}
               className={`flex py-5 sm:py-10  ${
-                pageSelected === "Crew" ? "border-b-2" : ""
+                pageSelected === "Crew" ? "sm:border-b-2" : ""
               }`}
             >
               <p className="font-bold block sm:hidden lg:block">03</p>
@@ -103,7 +103,7 @@ export default function Header() {
                 router.push("/Technology");
               }}
               className={`flex py-5 sm:py-10  ${
-                pageSelected === "Technology" ? "border-b-2" : ""
+                pageSelected === "Technology" ? "sm:border-b-2" : ""
               }`}
             >
               <p className="font-bold block sm:hidden lg:block">04</p>
